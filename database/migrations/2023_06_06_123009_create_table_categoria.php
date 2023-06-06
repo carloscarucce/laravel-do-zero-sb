@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categorias', function (Blueprint $table) {
             $table->id();
             $table->string('descricao', 250);
-            $table->enum('status', ['ativo', 'inativo']);
+            $table->enum('status', ['ativo', 'inativo'])->default('ativo');
             $table->timestamps();
         });
     }
