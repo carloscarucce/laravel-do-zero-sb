@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');   
+    $post = \App\Models\Post::find(1);
+    $autor = $post->autor;
+    $comentarios = $post->comentarios;
+
+    return response()->json(compact('post', 'comentarios', 'autor'));
 });
 
-
-Route::get('post', function () {
-    return view('index');   
-});
+Route::get('categorias', [Controllers\CategoriaController::class, 'index']);
+Route::get('posts', [Controllers\PostController::class, 'index']);
