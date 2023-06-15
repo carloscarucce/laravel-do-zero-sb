@@ -9,7 +9,7 @@
                 <x-list-item
                     :titulo="$categoria->descricao"
                     conteudo="Categoria"
-                    href="#"
+                    :href="url('categorias/'.$categoria->id)"
                     :model="$categoria"/>
             </div>
         @endforeach
