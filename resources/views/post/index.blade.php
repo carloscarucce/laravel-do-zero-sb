@@ -11,7 +11,7 @@
                         <x-list-item
                             :titulo="$post->titulo"
                             :conteudo="'Por: ' . $post->autor->name"
-                            href="#"
+                            :href=" url('posts/'.$post->slug) "
                             :model="$post"/>
                     </div>
                 @endforeach

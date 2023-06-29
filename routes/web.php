@@ -15,13 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    return response()->json($dados);
-
-    //return redirect('posts');
+    return redirect('posts');
 });
 
 Route::get('categorias', [Controllers\CategoriaController::class, 'index']);
 Route::get('categorias/{categoriaId}', [Controllers\CategoriaController::class, 'posts']);
 
 Route::get('posts', [Controllers\PostController::class, 'index']);
+Route::get('posts/{slug}', [Controllers\PostController::class, 'show']);
+Route::get('posts/{id}/comentarios', [Controllers\PostController::class, 'commentsList']);
