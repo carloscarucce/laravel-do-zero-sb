@@ -18,7 +18,7 @@
     <h3>Comentários: </h3>
     <form method="post" class="my-3">
         @csrf
-        <input name="post_id" type="hidden" value="{{ $post->id }}"/>
+        <input name="post_id" type="hidden" value="{{ $posts->id }}"/>
 
         <div class="row mb-3">
             <div class="col-12">
@@ -66,7 +66,7 @@
                 });
         };
 
-        carregarComentarios('{{ url("posts/{$post->id}/comentarios") }}');
+        carregarComentarios('{{ url("posts/{$posts->id}/comentarios") }}');
     </script>
 
 
