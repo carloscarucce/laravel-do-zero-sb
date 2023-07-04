@@ -6,7 +6,7 @@
                 {{ $comentario->created_at->format('d/m/Y H:i:s') }}:
             </h5>
             <p class="card-text">
-                {{ nl2br(strip_tags($comentario->conteudo)) }}
+                {!! nl2br(strip_tags($comentario->conteudo)) !!}
             </p>
         </div>
     </div>

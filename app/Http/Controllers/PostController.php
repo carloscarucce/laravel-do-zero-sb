@@ -31,7 +31,7 @@ class PostController extends Controller
         $comentarios = Comentario::query()
             ->where('post_id', $id)
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(5);
 
         return view('post.comments-list', compact('comentarios'));
     }

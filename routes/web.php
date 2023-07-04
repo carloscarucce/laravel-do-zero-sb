@@ -24,3 +24,6 @@ Route::get('categorias/{categoriaId}', [Controllers\CategoriaController::class, 
 Route::get('posts', [Controllers\PostController::class, 'index']);
 Route::get('posts/{slug}', [Controllers\PostController::class, 'show']);
 Route::get('posts/{id}/comentarios', [Controllers\PostController::class, 'commentsList']);
+
+Route::post('comentarios/save', [Controllers\ComentarioController::class, 'save']);
+
