@@ -25,6 +25,8 @@ Route::get('/', function () {
 Route::get('categorias', [Controllers\CategoriaController::class, 'index']);
 Route::get('posts', [Controllers\PostController::class, 'index']);
 
+Route::get('posts/novo', [Controllers\PostController::class, 'create']);
+Route::post('posts/salvar', [Controllers\PostController::class, 'save']);
 Route::get('posts/{slug}', [Controllers\PostController::class, 'show']);
 
 Route::get('posts/{id}/comentarios', [Controllers\PostController::class, 'comentariolist']);
