@@ -10,6 +10,10 @@
         Categoria: <span class="badge bg-warning">{{ $post->categoria->descricao }}</span>
     </div>
 
+    <div class="text-center my-2">
+        <x-img-capa :postId="$post->id"/>
+    </div>
+
     <div>
         {!! nl2br(strip_tags($post->conteudo, '<p><br><string>')) !!}
     </div>
