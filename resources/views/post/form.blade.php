@@ -51,7 +51,7 @@ $titulo = $post->id ? 'Editar postagem' : 'Criar postagem';
         <div class="row">
             <div class="col-12">
                 <label>Foto de capa</label>
-                <input type="file" name="foto_capa" accept="image/*" class="form-control"/>
+                <input type="file" name="foto_capa" accept="image/jpeg" class="form-control"/>
             </div>
         </div>
 
